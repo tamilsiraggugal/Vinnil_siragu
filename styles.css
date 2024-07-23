@@ -1,0 +1,684 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 19px;
+    margin: 0;
+    padding: 0;
+    /*background-image: url('bg.jpg'); /* Path to your background photo */
+    background-size: cover; /* Cover the entire background */
+    /*background-color: #000000; 
+    background-position: center; /* Center the background image */
+    color: #bbfc3b;
+    transition: background-color 0.5s; /* Smooth transition */
+}
+
+/* Your existing CSS styles here */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.kavivanar-regular {
+    font-family: "Kavivanar", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.logo img {
+    width: 120px; /* Adjust size as needed */
+}
+
+.club-info {
+    text-align: right;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Align tabs to the right */
+    margin-top: 10px;
+}
+
+nav li {
+    margin-left: 20px; /* Adjust spacing between tabs */
+}
+
+nav a {
+    text-decoration: none;
+    color: #42e2ed;
+    font-weight: bold;
+    font-size: 1.2em; /* Increase font size */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #aad72f; /* Change to your preferred hover color */
+}
+
+header h1:hover {
+    color: #1dcfa6;
+    
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 2em;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+/* styles.css */
+.counter {
+    display: flex;
+}
+
+.time-box {
+    background-color: #000000;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.time {
+    font-size: 36px;
+}
+
+.label {
+    font-size: 18px;
+}
+.gallery-container {
+    
+    white-space: nowrap; /* Prevents images from wrapping to the next line */
+}
+
+.gallery-image {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.gallery-container {
+    animation: slide 8s linear infinite; /* Adjust the duration as needed */
+}
+
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50%{transform: translateX(0);}
+    75%{transform: translateX(100%);}
+    100%{transform: translateX(0);}
+}
+
+
+.gallery-container {
+    animation: slide s linear infinite; 
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-40%); }
+}
+
+
+footer {
+    background-color: #1a67d3;
+    color:  #c50d47;
+    text-align: center;
+    padding: 10x; /* Decrease padding */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* styles.css */
+.team-card {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.member {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.member:hover {
+    background-color: #92c61b;
+    transform: scale(1.05);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  .form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ebf0f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #66afe9;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    transition: background-color 0.3s ease;
+  }
+  
+
+
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #fffcfc;
+}
+
+p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #9eff44;
+    font-weight: bold;
+}
+
+
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Subheading styles */
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* Contact info styles */
+.contact-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+/* Icon styles */
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    footer {
+        padding: 5px; /* Further decrease padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2px; /* Decrease title font size for smaller screens */
+    }
+   
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    
+
+    
+
+    
+}
+.button {
+    --primary: #ff5569;
+    --neutral-1: #f7f8f7;
+    --neutral-2: #e7e7e7;
+    --radius: 14px;
+  
+    cursor: pointer;
+    border-radius: var(--radius);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border: none;
+    box-shadow: 0 0.5px 0.5px 1px rgba(255, 255, 255, 0.2),
+      0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 5px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    padding: 20px;
+    height: 68px;
+    font-family: "Galano Grotesque", Poppins, Montserrat, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3),
+      0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 3px -3px rgba(0, 0, 0, 0.04);
+  }
+  .button:active {
+    transform: scale(1);
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3),
+      0 10px 3px -3px rgba(0, 0, 0, 0.2);
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    border: 2.5px solid transparent;
+    background: linear-gradient(var(--neutral-1), var(--neutral-2)) padding-box,
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45))
+        border-box;
+    z-index: 0;
+    transition: all 0.4s ease;
+  }
+  .button:hover::after {
+    transform: scale(1.05, 1.1);
+    box-shadow: inset 0 -1px 3px 0 rgba(255, 255, 255, 1);
+  }
+  .button::before {
+    content: "";
+    inset: 7px 6px 6px 6px;
+    position: absolute;
+    background: linear-gradient(to top, var(--neutral-1), var(--neutral-2));
+    border-radius: 30px;
+    filter: blur(0.5px);
+    z-index: 2;
+  }
+  .state p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .state .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: scale(1.25);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .state .icon svg {
+    overflow: visible;
+  }
+  
+  /* Outline */
+  .outline {
+    position: absolute;
+    border-radius: inherit;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    inset: -2px -3.5px;
+  }
+  .outline::before {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(
+      from 180deg,
+      transparent 60%,
+      white 80%,
+      transparent 100%
+    );
+    animation: spin 2s linear infinite;
+    animation-play-state: paused;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .button:hover .outline {
+    opacity: 1;
+  }
+  .button:hover .outline::before {
+    animation-play-state: running;
+  }
+  
+  /* Letters */
+  .state p span {
+    display: block;
+    opacity: 0;
+    animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
+  }
+  .button:hover p span {
+    opacity: 1;
+    animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
+  }
+  .button:focus p span {
+    opacity: 1;
+    animation: disapear 0.6s ease forwards calc(var(--i) * 0.03s);
+  }
+  @keyframes wave {
+    30% {
+      opacity: 1;
+      transform: translateY(4px) translateX(0) rotate(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-3px) translateX(0) rotate(0);
+      color: var(--primary);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px) translateX(5px) rotate(-90deg);
+      color: var(--primary);
+      filter: blur(5px);
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(4px) translateX(0) rotate(0);
+      filter: blur(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-3px) translateX(0) rotate(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+  }
+  @keyframes disapear {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translateX(5px) translateY(20px);
+      color: var(--primary);
+      filter: blur(5px);
+    }
+  }
+  
+  /* Plane */
+  .state--default .icon svg {
+    animation: land 0.6s ease forwards;
+  }
+  .button:hover .state--default .icon {
+    transform: rotate(45deg) scale(1.25);
+  }
+  .button:focus .state--default svg {
+    animation: takeOff 0.8s linear forwards;
+  }
+  .button:focus .state--default .icon {
+    transform: rotate(0) scale(1.25);
+  }
+  @keyframes takeOff {
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(70px) rotate(45deg) scale(2);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(160px) rotate(45deg) scale(0);
+    }
+  }
+  @keyframes land {
+    0% {
+      transform: translateX(-60px) translateY(30px) rotate(-50deg) scale(2);
+      opacity: 0;
+      filter: blur(3px);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0);
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  /* Contrail */
+  .state--default .icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 0;
+    left: -5px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+  }
+  .button:focus .state--default .icon:before {
+    animation: contrail 0.8s linear forwards;
+  }
+  @keyframes contrail {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    8% {
+      width: 15px;
+    }
+    60% {
+      opacity: 0.7;
+      width: 80px;
+    }
+    100% {
+      opacity: 0;
+      width: 160px;
+    }
+  }
+  
+  /* States */
+  .state {
+    padding-left: 29px;
+    z-index: 2;
+    display: flex;
+    position: relative;
+  }
+  .state--default span:nth-child(4) {
+    margin-right: 5px;
+  }
+  .state--sent {
+    display: none;
+  }
+  .state--sent svg {
+    transform: scale(1.25);
+    margin-right: 8px;
+  }
+  .button:focus .state--default {
+    position: absolute;
+  }
+  .button:focus .state--sent {
+    display: flex;
+  }
+  .button:focus .state--sent span {
+    opacity: 0;
+    animation: slideDown 0.8s ease forwards calc(var(--i) * 0.2s);
+  }
+  .button:focus .state--sent .icon svg {
+    opacity: 0;
+    animation: appear 1.2s ease forwards 0.8s;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale(4) rotate(-40deg);
+      color: var(--primary);
+      filter: blur(4px);
+    }
+    30% {
+      opacity: 1;
+      transform: scale(0.6);
+      filter: blur(1px);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+      filter: blur(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .btn {
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top, #00154c, #12376e, #23487f);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .btn span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+  }
+  
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn:hover .btn-text-one {
+    top: -100%;
+  }
+  
+  .btn:hover .btn-text-two {
+    top: 50%;
+  }
+  
+  
