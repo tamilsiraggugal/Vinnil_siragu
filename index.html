@@ -165,30 +165,49 @@ section h2 {
     font-size: 18px;
 }
 
-.gallery-container {
-    white-space: nowrap;
+.carousel-container {
+    position: relative;
+    width: 100%; /* Full-width container */
+    max-width: 650px; /* Adjust max width */
     overflow: hidden;
-    margin-bottom: 20px;
+    margin: auto;
 }
 
-.gallery-image {
-    width: 100%;
-    max-width: 300px;
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%; /* Each image takes full container width */
     height: auto;
-    margin: 10px;
-    cursor: pointer;
-    display: inline-block;
-    animation: slide 20s linear infinite;
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(400%);
-    }
-    100% {
-        transform: translateX(-900%);
-    }
+.carousel-image img {
+    width: 100%;
+    height: auto;
 }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
 
 footer {
     background-color: #1a67d3;
@@ -471,14 +490,21 @@ h1 {
     align-items: center;
 }
 
+.tlogo{
+    width: 100px;
+}
 
+.logo {
+    width: 150px; /* Increase width of logo */
+    height: auto; /* Ensure it scales proportionally */
+    margin: 5px;
+}
 
-    .logo,
-    .club-info {
-        margin: 5px;
-    }}
+@media (max-width: 768px) {
+    .logo {
+        width: 120px; /* Smaller size for mobile devices */
+    }
 
-    @media (max-width: 768px) {
     .team-card {
         flex-direction: column;
         align-items: center;
@@ -488,6 +514,7 @@ h1 {
         flex-basis: calc(50% - 20px);
         margin-bottom: 20px;
     }
+}
 
 }
 
@@ -506,8 +533,8 @@ h1 {
         </ul>
     </nav>
     <header>
-        <div class="logo">
-            <img src="tlogo.jpg" alt="Tamil Siragu Logo">
+        <div class="logo" style="size: '50%';">
+            <img src="tlogo.png" alt="Tamil Siragu Logo">
         </div>
         <div class="club-info">
             <h1>தமிழ் சிறகு</h1>
@@ -526,21 +553,26 @@ h1 {
         <section id="gallery">
             <h2>Photo Gallery</h2>
             <h3>Ft.Vasantham '24</h3>
-            <div class="gallery-container">
-                <img src="0.jpg" alt="Gallery Image 1" class="gallery-image">
-                <img src="1.jpg" alt="Gallery Image 2" class="gallery-image">
-                <img src="2.jpg" alt="Gallery Image 3" class="gallery-image">
-                <img src="11.jpg" alt="Gallery Image 4" class="gallery-image">
-                <img src="4.jpg" alt="Gallery Image 6" class="gallery-image">
-                <img src="5.jpg" alt="Gallery Image 7" class="gallery-image">
-                <img src="2.jpg" alt="Gallery Image 8" class="gallery-image">
-                <img src="4.jpg" alt="Gallery Image 8" class="gallery-image">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-image"><img src="0.jpg" alt="Image 1"></div>
+                    <div class="carousel-image"><img src="1.jpg" alt="Image 2"></div>
+                    <div class="carousel-image"><img src="2.jpg" alt="Image 3"></div>
+                    <div class="carousel-image"><img src="3.jpg" alt="Image 4"></div>
+                    <div class="carousel-image"><img src="4.jpg" alt="Image 5"></div>
+                    <div class="carousel-image"><img src="5.jpg" alt="Image 6"></div>
+                    <div class="carousel-image"><img src="6.jpg" alt="Image 7"></div>
+                    <div class="carousel-image"><img src="7.jpg" alt="Image 8"></div>
+                </div>
+                <button class="prev">‹</button>
+                <button class="next">›</button>
             </div>
+            
         </section>
         <section id="events">
             <h2>Upcoming Events</h2>
-            <h3>சிறகின் கனவு - Siragin Kanavu</h3>
-            
+            <h3>முகவரி - Mugavari</h3>
+            <h3>அகரம்  - Agaram</h3>
             
             <div class="counter">
                 <div class="time-box">
@@ -718,3 +750,27 @@ h1 {
     <script src="script.js"></script>
 </body>
 </html>
+<script>
+const wrapper = document.querySelector('.carousel-wrapper');
+const images = document.querySelectorAll('.carousel-image');
+const totalImages = images.length;
+
+let index = 0;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % totalImages;
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + totalImages) % totalImages;
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+});
+
+// Optional auto-scroll
+setInterval(() => {
+    index = (index + 1) % totalImages;
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+}, 5000);  // Adjust time interval (e.g., 5 seconds)
+
+</script>
